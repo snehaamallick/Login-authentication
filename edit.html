@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Edit form</title>
+</head>
+<body>
+
+<!--Logout link-->
+	<a href="login.html" style="font-weight:bold" onclick="logout()" class="btn btn-link">Logout</a>
+
+<!--User authentication form-->		
+	<div class="container">
+	 <h2>Enter your username to authenticate:</h2>
+		<form id="authenticate">
+		<div class="form-group row">
+			<label for="firstname" class="col-sm-2 col-form-label">UserName<span style="color: red;">*</span></label>
+			<div class="col-sm-5">
+				<input type="firstname" class="form-control" id="username" placeholder="UserName">
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="offset-sm-2 col-sm-10">
+				<button type="button" class="btn btn-primary" onclick="authenticateuser()">Authenticate</button>
+			</div>
+		</div>
+		</form>
+	</div>
+
+	<br>
+	<br>
+<!--form to edit details-->
+	<div class="container">
+		<h2>Edit Details:</h2>
+		  <form id="myform">
+			<div class="form-group row">
+			  <label for="firstname" class="col-sm-2 col-form-label">FirstName</label>
+			  <div class="col-sm-5">
+				<input type="firstname" class="form-control" id="firstname" placeholder="FirstName">
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="lastname" class="col-sm-2 col-form-label">LastName</label>
+			  <div class="col-sm-5">
+				<input type="lastname" class="form-control" id="lastname" placeholder="LastName">
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="email" class="col-sm-2 col-form-label">Email</label>
+			  <div class="col-sm-5">
+				<input type="email" class="form-control" id="email" placeholder="Email">
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="password" class="col-sm-2 col-form-label">Password</label>
+			  <div class="col-sm-5">
+				<input type="password" class="form-control" id="password" placeholder="Password">
+			  </div>
+			</div>
+		   
+			<div class="form-group row">
+			  <div class="offset-sm-2 col-sm-10">
+				<button type="button" class="btn btn-primary" onclick="updateuser()">Update Details</button>
+			  </div>
+			</div>
+		  </form>
+	</div>
+<br>
+
+<!--Div to display the editted data-->
+<div class="container" STYLE="font-size: 13pt" id="editeddata"></div>
+	<script src="controller.js">
+</script>
+
+	</body>
+	</html>
+	
+	

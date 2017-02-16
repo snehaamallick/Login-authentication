@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<title>Login</title>
+</head>
+<body>
+
+<!--Login form-->
+<div class="container">
+    <h2>Login</h2>
+    <form name="form" action="success.html" method="post">
+        <div class="form-group">
+            <label for="username">Username<span style="color: red;">*</span></label>
+            <input type="text" name="username" id="username" class="form-control" />
+            <span class="help-block" style="display:none">Username is required</span>
+        </div>
+        <div class="form-group" >
+            <label for="password">Password<span style="color: red;">*</span></label>
+            <input type="password" name="password" id="password" class="form-control" />
+            <span style="display:none">Password is required</span>
+        </div>
+        <div class="form-actions">
+			<input type="button" id="btnQueryString" onclick="return validate()" value="Login" />
+			New here?<a href="register.html" class="btn btn-link">Register</a>
+        </div>
+	</form>
+</div>
+		
+<!--script for cookie-->
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnQueryString").bind("click", function () {
+            var url = "success.html?name=" + encodeURIComponent($("#username").val());
+            window.location.href = url;
+        });
+    });
+</script>
+<!--Script for including js file-->
+<script src="controller.js"></script>
+
+</body>
+</html>
+	
+	

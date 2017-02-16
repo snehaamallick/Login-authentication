@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<title>Register</title>
+</head>
+<body>
+<!--Register form-->
+<div class="container">
+	<h2>Register here:</h2>
+	<form id="myform" action="login.html">
+    <div class="form-group row">
+      <label for="firstname" class="col-sm-2 col-form-label">FirstName</label>
+      <div class="col-sm-5">
+        <input type="firstname" class="form-control" id="firstname" placeholder="FirstName">
+      </div>
+    </div>
+	<div class="form-group row">
+      <label for="lastname" class="col-sm-2 col-form-label">LastName</label>
+      <div class="col-sm-5">
+        <input type="lastname" class="form-control" id="lastname" placeholder="LastName">
+      </div>
+    </div>
+	<div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+    </div>
+	<div class="form-group row">
+      <label for="username" class="col-sm-2 col-form-label">UserName</label>
+      <div class="col-sm-5">
+        <input type="username" class="form-control" id="username" placeholder="UserName">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-5">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" onclick="insert()">Register</button>
+		<a href="login.html" class="btn btn-link">Login</a>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="controller.js"></script>
+<!--End of form-->
+
+</body>
+</html>
+	
+	
